@@ -17,7 +17,7 @@ permalink: /form
   $(document).ready(function() {
     $('#contact').submit(function(event) {
       $.ajax({
-        url: 'https://a32d3f7o6f.execute-api.us-east-1.amazonaws.com/production/submit',
+        url: 'https://02u70es44i.execute-api.us-east-1.amazonaws.com/production/submit',
         method: 'POST',
         data: $('#contact').serialize(),
         dataType: 'json'});
