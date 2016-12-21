@@ -11,10 +11,25 @@ categories:
 permalink: /form
 ---
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#contact').submit(function(event) {
+      $.ajax({
+        url: 'https://nar1ri88x3.execute-api.us-east-1.amazonaws.com/test/submit',
+        method: 'POST',
+        data: $('#contact').serialize(),
+        dataType: 'json'});
+      event.preventDefault();
+    });
+  });
+</script>
+
 <div>
-  <form action="https://nar1ri88x3.execute-api.us-east-1.amazonaws.com/test/submit" method="post">
+  <form id="contact" action= method="post">
   First name:<br>
-  <input type="text" value="Mickey"><br>
+  <input type="text" name="firstname" value="Mickey"><br>
   Last name:<br>
   <input type="text" name="lastname" value="Mouse"><br><br>
   <input type="submit" value="Submit">
