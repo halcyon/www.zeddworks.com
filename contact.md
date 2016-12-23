@@ -9,9 +9,20 @@ weight: 5
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+<script>
+  $(document).ready(function() {
+    $('#contact').submit(function(event) {
+      $.ajax({
+        url: 'https://rqxk18y88g.execute-api.us-east-1.amazonaws.com/production/submit',
+        method: 'POST',
+        data: $('#contact').serialize(),
+        dataType: 'json'});
+      event.preventDefault();
+    });
+  });
+</script>
 
-<div>
-  <form id="contact" action= method="post">
+<form id="contact" action= method="post">
   Name:<br>
   <input type="text" name="name"><br>
   Email:<br>
@@ -21,8 +32,8 @@ weight: 5
   Message:<br>
   <textarea name="message" cols="50" rows="10"></textarea>
   <input type="submit" value="Submit">
-  </form>
-</div>
+</form>
+
 
 
 ### Office Hours are Monday through Thursday 10 am to 6 pm
