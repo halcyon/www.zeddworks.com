@@ -28,7 +28,7 @@ weight: 5
   Name:<br>
   <input type="text" name="name" data-parsley-required data-parsley-error-message="Name is required"><br>
   Email:<br>
-  <input type="text" name="email" data-parsley-type="email"><br>
+  <input type="text" name="email" data-parsley-required data-parsley-type="email"><br>
   Phone:<br>
   <input type="text" name="phone" data-parsley-required="true"><br>
   Message:<br>
