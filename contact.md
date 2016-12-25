@@ -30,7 +30,7 @@ weight: 5
   Phone:<br>
   <input type="text" name="phone"><br>
   Message:<br>
-  <textarea name="message" cols="50" rows="10"></textarea>
+  <textarea name="message" cols="50" rows="10" maxlength="10"></textarea>
   <input type="submit" value="Submit">
 </form>
 
