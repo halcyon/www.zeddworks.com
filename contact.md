@@ -21,10 +21,11 @@ weight: 5
         dataType: 'json'
       })
       .done(function(data) {
-        console.log("Done!");
+        console.log("done");
+        console.log(data);
       })
       .fail(function(data) {
-        console.log("sucks!");
+        console.log("fail");
         console.log(data);
       });
       event.preventDefault();
