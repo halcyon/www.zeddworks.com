@@ -23,11 +23,11 @@ weight: 5
   });
 </script>
 
-<form id="contact" method="post" data-parsley-validate>
+<form id="contact" method="post">
   Name:<br>
-  <input type="text" name="name" data-parsley-required="true"><br>
+  <input type="text" name="name" data-parsley-required data-parsley-error-message="Name is required"><br>
   Email:<br>
-  <input type="text" name="email" data-parsley-required="true"><br>
+  <input type="text" name="email" data-parsley-type="email"><br>
   Phone:<br>
   <input type="text" name="phone" data-parsley-required="true"><br>
   Message:<br>
