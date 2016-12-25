@@ -12,6 +12,7 @@ weight: 5
 
 <script>
   $(document).ready(function() {
+    $('#contact').parsley();
     $('#contact').submit(function(event) {
       $.ajax({
         url: 'https://rqxk18y88g.execute-api.us-east-1.amazonaws.com/production/submit',
