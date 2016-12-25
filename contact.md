@@ -23,7 +23,7 @@ weight: 5
   });
 </script>
 
-<form id="contact" method="post">
+<form id="contact" method="post" data-parsley-validate>
   Name:<br>
   <input type="text" name="name" data-parsley-required="true"><br>
   Email:<br>
