@@ -22,7 +22,7 @@ weight: 5
   });
 </script>
 
-<form id="contact" action= method="post">
+<form id="contact" method="post">
 </form>
 
 <form id="contact" action= method="post">
