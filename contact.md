@@ -34,20 +34,6 @@ weight: 5
   <input type="submit" value="Submit">
 </form>
 
-<form id="contact" action= method="post">
-  Name:<br>
-  <input type="text" name="name"><br>
-  Email:<br>
-  <input type="text" name="email"><br>
-  Phone:<br>
-  <input type="text" name="phone"><br>
-  Message:<br>
-  <textarea name="message" cols="50" rows="10"></textarea>
-  <input type="submit" value="Submit">
-</form>
-
-
-
 ### Office Hours are Monday through Thursday 10 am to 6 pm
 
 * Neuropsychological and behavioral medicine services are offered to adults and adolescents
