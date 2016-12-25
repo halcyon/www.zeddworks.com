@@ -22,7 +22,7 @@ weight: 5
       })
       .success(function(data, status, jqXHR) {
         console.log("Succeeded!");
-      }));
+      });
       event.preventDefault();
     });
   });
