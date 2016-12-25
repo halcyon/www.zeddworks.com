@@ -8,6 +8,7 @@ weight: 5
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/parsleyjs/2.6.0/parsley.min.js"></script>
 
 <script>
   $(document).ready(function() {
@@ -24,13 +25,13 @@ weight: 5
 
 <form id="contact" method="post">
   Name:<br>
-  <input type="text" name="name"><br>
+  <input type="text" name="name" data-parsley-required="true"><br>
   Email:<br>
-  <input type="text" name="email"><br>
+  <input type="text" name="email" data-parsley-required="true"><br>
   Phone:<br>
-  <input type="text" name="phone"><br>
+  <input type="text" name="phone" data-parsley-required="true"><br>
   Message:<br>
-  <textarea name="message" cols="50" rows="10" maxlength="500"></textarea>
+  <textarea name="message" cols="50" rows="10" maxlength="500" data-parsley-required="true"></textarea>
   <input type="submit" value="Submit">
 </form>
 
