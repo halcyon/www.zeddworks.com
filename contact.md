@@ -20,8 +20,11 @@ weight: 5
         data: $('#contact').serialize(),
         dataType: 'json'
       })
-      .success(function(data, status, jqXHR) {
-        console.log("Succeeded!");
+      .done(function(data) {
+        console.log("Done!");
+      })
+      .fail(function(data) {
+        console.log("failed!");
       });
       event.preventDefault();
     });
