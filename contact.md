@@ -23,6 +23,9 @@ weight: 5
 </script>
 
 <form id="contact" action= method="post">
+</form>
+
+<form id="contact" action= method="post">
   Name:<br>
   <input type="text" name="name"><br>
   Email:<br>
