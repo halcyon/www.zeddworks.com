@@ -23,6 +23,15 @@ weight: 5
 </script>
 
 <form id="contact" method="post">
+  Name:<br>
+  <input type="text" name="name"><br>
+  Email:<br>
+  <input type="text" name="email"><br>
+  Phone:<br>
+  <input type="text" name="phone"><br>
+  Message:<br>
+  <textarea name="message" cols="50" rows="10"></textarea>
+  <input type="submit" value="Submit">
 </form>
 
 <form id="contact" action= method="post">
