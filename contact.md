@@ -18,7 +18,10 @@ weight: 5
         url: 'https://rqxk18y88g.execute-api.us-east-1.amazonaws.com/production/submit',
         method: 'POST',
         data: $('#contact').serialize(),
-        dataType: 'json'});
+        dataType: 'json'
+        success: function(data, status, request) {
+                   console.log("Enigma Suceeded!")
+                 }});
       event.preventDefault();
     });
   });
