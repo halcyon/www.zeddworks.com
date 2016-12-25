@@ -24,7 +24,7 @@ weight: 5
         console.log("Done!");
       })
       .fail(function(data) {
-        console.log("failed!");
+        console.log("failed! ", data);
       });
       event.preventDefault();
     });
