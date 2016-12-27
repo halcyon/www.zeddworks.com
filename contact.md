@@ -15,7 +15,7 @@ weight: 5
     $('#contact').parsley();
     $('#contact').submit(function(event) {
       $.ajax({
-        url: 'https://rqxk18y88g.execute-api.us-east-1.amazonaws.com/production/submit',
+      url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production/submit',
         method: 'POST',
         data: $('#contact').serialize(),
         dataType: 'json'
@@ -34,19 +34,29 @@ weight: 5
 </script>
 
 <form id="contact" method="post">
-  <label for="name">Full Name :</label>
-  <input type="text" name="name" data-parsley-required data-parsley-error-message="Name is required">
+  <fieldset class="account-info">
+  <label for="name">Full Name
+    <input type="text" name="name" id="name" required="" data-parsley-error-message="Name is required">
+  </label>
 
-  <label for="email">Email :</label>
-  <input type="text" name="email" data-parsley-required data-parsley-type="email">
+  <label for="email">Email
+    <input type="text" name="email" id="email" required="" data-parsley-type="email">
+  </label>
 
-  <label for="phone">Phone: </label>
-  <input type="text" name="phone" data-parsley-required="true">
+  <label for="phone">Phone
+    <input type="text" name="phone" id="phone" required="">
+  </label>
 
-  <label for="message">Message: </label>
-  <textarea name="message" cols="50" rows="10" maxlength="500" data-parsley-required="true"></textarea>
+  <label fppppor="message">Message
+    <textarea name="message" id="message" cols="50" rows="10" maxlength="500" required="true"></textarea>
+  </label>
+  </fieldset>
 
+  <fieldset class="account-action">
+  <label>
   <input type="submit" value="Submit">
+  </label>
+  </fieldset>
 </form>
 
 ### Office Hours are Monday through Thursday 10 am to 6 pm
