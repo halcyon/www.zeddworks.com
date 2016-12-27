@@ -32,6 +32,6 @@ textarea.parsley-error {
   opacity: 1;
 }
 
-li.parsley-required {
+li.parsley-custom-error-message li.parsley-type li.parsley-required {
   color: red;
 }
