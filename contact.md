@@ -34,11 +34,10 @@ weight: 5
 </script>
 
 <form id="contact" method="post">
-  Name: <input type="text" name="name" data-parsley-required data-parsley-error-message="Name is required"><br>
-  Email: <input type="text" name="email" data-parsley-required data-parsley-type="email"><br>
-  Phone: <input type="text" name="phone" data-parsley-required="true"><br>
-  Message:<br>
-  <textarea name="message" cols="50" rows="10" maxlength="500" data-parsley-required="true"></textarea>
+  Name: <input type="text" name="name" data-parsley-required data-parsley-error-message="Name is required">
+  Email: <input type="text" name="email" data-parsley-required data-parsley-type="email">
+  Phone: <input type="text" name="phone" data-parsley-required="true">
+  Message: <textarea name="message" cols="50" rows="10" maxlength="500" data-parsley-required="true"></textarea>
   <input type="submit" value="Submit">
 </form>
 
