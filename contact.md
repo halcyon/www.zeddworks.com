@@ -60,6 +60,7 @@ weight: 5
         console.log("done");
         console.log(data);
         $('#delivered').fadeIn();
+        $('.progress-bar').attr('aria-valuenow',100);
         setInterval(function() {
           $('#submission').hide();
           $('#contact').hide();
