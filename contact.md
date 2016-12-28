@@ -62,7 +62,7 @@ weight: 5
         $('#delivered').fadeIn();
         $('.progress-bar').attr('aria-valuenow',100);
         setInterval(function() {
-          $('#submission').hide();
+          $('#submission').modal('hide');
           $('#contact').hide();
         }, 3000);
       })
@@ -88,7 +88,7 @@ weight: 5
     <input type="text" name="phone" id="phone" required="">
 
     <label for="message">Message</label>
-    <textarea name="message" id="message" cols="50" rows="10" maxlength="500" required="true"></textarea>
+    <textarea name="message" id="message" cols="70" rows="10" maxlength="500" required="true"></textarea>
   </fieldset>
 
   <fieldset class="account-action">
