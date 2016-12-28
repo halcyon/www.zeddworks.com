@@ -103,7 +103,7 @@ weight: 5
     <input type="text" name="phone" id="phone" required="" data-parsley-error-message="Your phone number is required.">
 
     <label for="message">Message</label>
-    <textarea name="message" id="message" rows="10" maxlength="500" required="" data-parsley=error-message="Your message is required.">
+    <textarea name="message" id="message" rows="10" maxlength="500" required="" data-parsley-error-message="Your message is required.">
     </textarea>
   </fieldset>
 
