@@ -40,14 +40,14 @@ $('.progress-bar').each(function() {
 
       //update the progress
         $bar.width(currWidth+'%');
-        $bar.attr('aria-valuenow',currWidth+10);
+        $bar.attr('aria-valuenow',currWidth+1);
 
       //clear timer when max is reach
       if (currWidth >= maxWidth){
         clearInterval(progress);
       }
 
-    }, 500);
+    }, 10);
 });
       $.ajax({
       url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production/submit',
