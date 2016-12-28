@@ -97,7 +97,7 @@ weight: 5
     <input type="text" name="name" id="name" required="" data-parsley-error-message="Your name is required.">
 
     <label for="email">Email</label>
-    <input type="text" name="email" id="email" required="" data-parsley-error-message="Your email is required." data-parsley-type="email">
+    <input type="text" name="email" id="email" data-parsley-type="email">
 
     <label for="phone">Phone</label>
     <input type="text" name="phone" id="phone" required="" data-parsley-error-message="Your phone number is required.">
