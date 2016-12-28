@@ -68,6 +68,12 @@ weight: 5
       })
       .done(function(data, textStatus, jqXHR) {
         console.log(jqXHR);
+        if (jqXHR.responseText='{"code":0,"error":"SUCCESS","message":"messages sent"}') {
+          console.log("woohoo");
+        } else {
+          console.log("we have failed");
+        }
+
         $('.progress-bar').attr('aria-valuenow',100);
         $('#delivered').fadeIn();
         setInterval(function() {
