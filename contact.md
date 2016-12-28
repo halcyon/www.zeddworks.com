@@ -59,11 +59,16 @@ weight: 5
       .done(function(data) {
         console.log("done");
         console.log(data);
-        $('#myModal').modal('show');
+        $('#delivered').fadeIn();
+        setInterval(function() {
+          $('#submission').hide();
+          $('#contact').hide();
+        }, 3000);
       })
       .fail(function(data) {
         console.log("fail");
         console.log(data);
+        $('#failed').fadeIn();
       });
       event.preventDefault();
     });
