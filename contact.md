@@ -94,16 +94,17 @@ weight: 5
 <form id="contact" method="post">
   <fieldset class="account-info">
     <label for="name">Full Name</label>
-    <input type="text" name="name" id="name" required="" data-parsley-error-message="Name is required">
+    <input type="text" name="name" id="name" required="" data-parsley-error-message="Your name is required.">
 
     <label for="email">Email</label>
-    <input type="text" name="email" id="email" required="" data-parsley-type="email">
+    <input type="text" name="email" id="email" required="" data-parsley-error-message="Your email is required." data-parsley-type="email">
 
     <label for="phone">Phone</label>
-    <input type="text" name="phone" id="phone" required="">
+    <input type="text" name="phone" id="phone" required="" data-parsley-error-message="Your phone number is required.">
 
     <label for="message">Message</label>
-    <textarea name="message" id="message" rows="10" maxlength="500" required="true"></textarea>
+    <textarea name="message" id="message" rows="10" maxlength="500" required="" data-parsley=error-message="Your message is required.">
+    </textarea>
   </fieldset>
 
   <fieldset class="account-action">
