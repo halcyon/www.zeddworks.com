@@ -14,6 +14,7 @@ weight: 5
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Submitting message &hellip;</h4>
       </div>
       <div class="modal-body">
@@ -68,8 +69,6 @@ weight: 5
       .done(function(data) {
         $('.progress-bar').attr('aria-valuenow',100);
         $('#delivered').fadeIn();
-        $('#submission').modal({keyboard: true,
-                                backdrop: true});
         setInterval(function() {
           $('#submission').modal('hide');
           $('#contact').hide();
@@ -78,8 +77,6 @@ weight: 5
       .fail(function(data) {
         $('.progress-bar').attr('aria-valuenow',100);
         $('#failed').fadeIn();
-        $('#submission').modal({keyboard: true,
-                                backdrop: true});
       });
       event.preventDefault();
     });
