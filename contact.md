@@ -55,7 +55,7 @@ weight: 5
           if (currWidth >= maxWidth){
             clearInterval(progress);
           }
-        }, 300);
+        }, 400);
       });
       $.ajax({
       url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production/submit',
