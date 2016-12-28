@@ -21,8 +21,8 @@ weight: 5
           <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemax="100">
           </div>
         </div>
-        <div class="alert alert-success" role="alert">Delivered!</div>
-        <div class="alert alert-error" role="alert">Failed!</div>
+        <div id="delivered" show="hidden" class="alert alert-success" role="alert">Delivered!</div>
+        <div id="failed" show="hidden" class="alert alert-danger" role="alert">Failed!</div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
