@@ -40,6 +40,15 @@ weight: 5
     $('#failed').fadeIn();
   }
 
+  function success() {
+    $('.progress-bar').attr('aria-valuenow',100);
+    $('#delivered').fadeIn();
+    setInterval(function() {
+      $('#submission').modal('hide');
+      $('#contact-panel').hide();
+    }, 3000);
+  }
+
   $(document).ready(function() {
     $('#contact').parsley();
     $('#contact').submit(function(event) {
@@ -73,12 +82,7 @@ weight: 5
       })
       .done(function(data, textStatus, jqXHR) {
         if (jqXHR.responseText='{"code":0,"error":"SUCCESS","message":"messages sent"}') {
-          $('.progress-bar').attr('aria-valuenow',100);
-          $('#delivered').fadeIn();
-          setInterval(function() {
-            $('#submission').modal('hide');
-            $('#contact').hide();
-          }, 3000);
+          success();
         } else {
           failure();
         }
@@ -91,7 +95,7 @@ weight: 5
   });
 </script>
 
-<div class="panel panel-primary">
+<div id="contact-panel" class="panel panel-primary">
   <div class="panel-body">
     <form id="contact" method="post">
       <div class="form-group">
