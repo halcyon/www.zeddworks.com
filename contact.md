@@ -21,8 +21,12 @@ weight: 5
           <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemax="100">
           </div>
         </div>
-        <div id="delivered" class="alert alert-success" role="alert" style="display:none;">Delivered!</div>
-        <div id="failed" class="alert alert-danger" role="alert" style="display:none;">Failed!</div>
+        <div id="delivered" class="alert alert-success" role="alert" style="display:none;">
+          Message Delivered.
+        </div>
+        <div id="failed" class="alert alert-danger" role="alert" style="display:none;">
+          Message delivery failed. Please leave a message with Doctor Lacy's office at 770-722-7827.
+        </div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
