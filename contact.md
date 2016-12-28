@@ -92,23 +92,29 @@ weight: 5
 </script>
 
 <form id="contact" method="post">
-  <fieldset class="account-info">
+  <div class="form-group"
     <label for="name">Full Name</label>
-    <input type="text" name="name" id="name" required="" data-parsley-error-message="Your name is required.">
+    <input type="text" name="name" class="form-control" id="name" required="" data-parsley-error-message="Your name is required.">
+  </div>
 
+  <div class="form-group"
     <label for="email">Email</label>
-    <input type="text" name="email" id="email" required="" data-parsley-error-message="This value should be a valid email." data-parsley-type="email">
+    <input type="text" name="email" class="form-control" id="email" required="" data-parsley-error-message="This value should be a valid email." data-parsley-type="email">
+  </div>
 
+  <div class="form-group"
     <label for="phone">Phone</label>
-    <input type="text" name="phone" id="phone" required="" data-parsley-error-message="Your phone number is required.">
+    <input type="text" name="phone" class="form-control" id="phone" required="" data-parsley-error-message="Your phone number is required.">
+  </div>
 
+  <div class="form-group"
     <label for="message">Message</label>
-    <textarea name="message" id="message" rows="10" maxlength="500" required="" data-parsley-error-message="Your message is required.">
+    <textarea name="message" class="form-control" id="message" rows="10" maxlength="500" required="" data-parsley-error-message="Your message is required.">
     </textarea>
-  </fieldset>
+  </div>
 
   <fieldset class="account-action">
-    <input class="btn btn-primary" type="submit" value="Submit">
+    <button class="btn btn-primary" type="submit">Submit</button>
   </fieldset>
 </form>
 
