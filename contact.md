@@ -91,6 +91,7 @@ weight: 5
   });
 </script>
 
+<div class="bs-example">
 <form id="contact" method="post">
   <div class="form-group">
     <label for="name">Full Name</label>
@@ -117,6 +118,7 @@ weight: 5
     <button class="btn btn-primary" type="submit">Submit</button>
   </fieldset>
 </form>
+</div>
 
 ### Office Hours are Monday through Thursday 10 am to 6 pm
 
