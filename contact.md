@@ -92,34 +92,33 @@ weight: 5
 </script>
 
 <div class="panel panel-primary">
-<div class="panel-body">
-<form id="contact" method="post">
-  <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" name="name" class="form-control" id="name" required="" data-parsley-error-message="Your name is required.">
-  </div>
+  <div class="panel-body">
+    <form id="contact" method="post">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" class="form-control" id="name" required="" data-parsley-error-message="Your name is required.">
+      </div>
 
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="text" name="email" class="form-control" id="email" required="" data-parsley-error-message="This value should be a valid email." data-parsley-type="email">
-  </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" class="form-control" id="email" required="" data-parsley-error-message="This value should be a valid email." data-parsley-type="email">
+      </div>
 
-  <div class="form-group">
-    <label for="phone">Phone</label>
-    <input type="text" name="phone" class="form-control" id="phone" required="" data-parsley-error-message="Your phone number is required.">
-  </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" class="form-control" id="phone" required="" data-parsley-error-message="Your phone number is required.">
+      </div>
 
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea name="message" class="form-control" id="message" rows="10" maxlength="500" required="" data-parsley-error-message="Your message is required.">
-    </textarea>
-  </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" class="form-control" id="message" rows="10" maxlength="500" required="" data-parsley-error-message="Your message is required."></textarea>
+      </div>
 
-  <fieldset class="account-action">
-    <button class="btn btn-primary" type="submit">Submit</button>
-  </fieldset>
-</form>
-</div>
+      <fieldset class="account-action">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </div>
 </div>
 
 ### Office Hours are Monday through Thursday 10 am to 6 pm
