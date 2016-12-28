@@ -67,7 +67,7 @@ weight: 5
         dataType: 'json'
       })
       .done(function(data) {
-        console.log("The data!: " data);
+        console.log("The data!: " + data);
         $('.progress-bar').attr('aria-valuenow',100);
         $('#delivered').fadeIn();
         setInterval(function() {
