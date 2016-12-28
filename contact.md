@@ -36,6 +36,8 @@ weight: 5
   $(document).ready(function() {
     $('#contact').parsley();
     $('#contact').submit(function(event) {
+      $('#delivered').hide();
+      $('#failed').hide();
       $('.progress-bar').attr('aria-valuenow',0)
       $('#submission').modal('show');
       $('.progress-bar').each(function() {
