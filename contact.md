@@ -10,7 +10,7 @@ weight: 5
 <script src="https://cdn.jsdelivr.net/parsleyjs/2.6.0/parsley.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+<div class="modal fade" id="submission" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -18,9 +18,11 @@ weight: 5
       </div>
       <div class="modal-body">
         <div class="progress">
-        <div id="submissionBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemax="100">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemax="100">
+          </div>
         </div>
-        </div>
+        <div class="alert alert-success" role="alert">Delivered!</div>
+        <div class="alert alert-error" role="alert">Failed!</div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -30,25 +32,24 @@ weight: 5
   $(document).ready(function() {
     $('#contact').parsley();
     $('#contact').submit(function(event) {
-      $('#myModal').modal('show');
-$('.progress-bar').each(function() {
-    var $bar = $(this);
-    var progress = setInterval(function() {
+      $('#submission').modal('show');
+      $('.progress-bar').each(function() {
+        var $bar = $(this);
+        var progress = setInterval(function() {
 
-      var currWidth = parseInt($bar.attr('aria-valuenow'));
-      var maxWidth = parseInt($bar.attr('aria-valuemax'));
+          var currWidth = parseInt($bar.attr('aria-valuenow'));
+          var maxWidth = parseInt($bar.attr('aria-valuemax'));
 
-      //update the progress
-        $bar.width(currWidth+'%');
-        $bar.attr('aria-valuenow',currWidth+1);
+          //update the progress
+          $bar.width(currWidth+'%');
+          $bar.attr('aria-valuenow',currWidth+1);
 
-      //clear timer when max is reach
-      if (currWidth >= maxWidth){
-        clearInterval(progress);
-      }
-
-    }, 100);
-});
+          //clear timer when max is reach
+          if (currWidth >= maxWidth){
+            clearInterval(progress);
+          }
+        }, 100);
+      });
       $.ajax({
       url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production/submit',
         method: 'POST',
