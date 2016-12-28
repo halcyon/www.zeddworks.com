@@ -69,6 +69,8 @@ weight: 5
       .done(function(data) {
         $('.progress-bar').attr('aria-valuenow',100);
         $('#delivered').fadeIn();
+        $('#submission').modal({keyboard: true,
+                                backdrop: true});
         setInterval(function() {
           $('#submission').modal('hide');
           $('#contact').hide();
@@ -77,6 +79,8 @@ weight: 5
       .fail(function(data) {
         $('.progress-bar').attr('aria-valuenow',100);
         $('#failed').fadeIn();
+        $('#submission').modal({keyboard: true,
+                                backdrop: true});
       });
       event.preventDefault();
     });
