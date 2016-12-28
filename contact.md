@@ -66,8 +66,8 @@ weight: 5
         data: $('#contact').serialize(),
         dataType: 'json'
       })
-      .done(function(data) {
-        console.log("The data!: " + data);
+      .done(function(data, textStatus, jqXHR) {
+        console.log("The data!: " + jqXHR.responseJSON);
         $('.progress-bar').attr('aria-valuenow',100);
         $('#delivered').fadeIn();
         setInterval(function() {
