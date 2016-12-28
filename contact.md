@@ -108,7 +108,7 @@ weight: 5
   </fieldset>
 
   <fieldset class="account-action">
-    <input class="btn btn-default" type="submit" value="Submit">
+    <input class="btn btn-primary" type="submit" value="Submit">
   </fieldset>
 </form>
 
