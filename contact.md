@@ -42,7 +42,6 @@ weight: 5
       $('.progress-bar').attr('aria-valuenow',0)
       $('#submission').modal({keyboard: false,
                               backdrop: false});
-      $('#submission').modal('show');
       $('.progress-bar').each(function() {
         var $bar = $(this);
         var progress = setInterval(function() {
