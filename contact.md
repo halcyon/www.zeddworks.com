@@ -79,8 +79,7 @@ weight: 5
       .fail(function(data) {
         $('.progress-bar').attr('aria-valuenow',100);
         $('#failed').fadeIn();
-        $('#submission').modal({keyboard: true,
-                                backdrop: true});
+        $('#submission').modal({keyboard: true});
       });
       event.preventDefault();
     });
