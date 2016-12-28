@@ -18,8 +18,8 @@ weight: 5
       </div>
       <div class="modal-body">
         <div class="progress">
-          <div id="submissionBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-            <span class="sr-only">60% Complete</span>
+          <div id="submissionBar" class="progress-bar" role="progressbar" style="width: 0%;">
+            <!-- <span class="sr-only">60% Complete</span> -->
           </div>
         </div>
       </div>
