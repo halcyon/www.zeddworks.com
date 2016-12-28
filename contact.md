@@ -67,7 +67,7 @@ weight: 5
         dataType: 'json'
       })
       .done(function(data, textStatus, jqXHR) {
-        console.log("The data!: " + jqXHR.responseJSON);
+        console.log(jqXHR);
         $('.progress-bar').attr('aria-valuenow',100);
         $('#delivered').fadeIn();
         setInterval(function() {
