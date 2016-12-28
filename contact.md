@@ -47,7 +47,7 @@ $('.progress-bar').each(function() {
         clearInterval(progress);
       }
 
-    }, 10);
+    }, 100);
 });
       $.ajax({
       url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production/submit',
