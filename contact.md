@@ -18,9 +18,8 @@ weight: 5
       </div>
       <div class="modal-body">
         <div class="progress">
-          <div id="submissionBar" class="progress-bar" role="progressbar" style="width: 0%;">
-            <!-- <span class="sr-only">60% Complete</span> -->
-          </div>
+        <div id="submissionBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemax="100">
+        </div>
         </div>
       </div>
     </div><!-- /.modal-content -->
@@ -31,6 +30,25 @@ weight: 5
   $(document).ready(function() {
     $('#contact').parsley();
     $('#contact').submit(function(event) {
+      $('#myModal').modal('show');
+$('.progress-bar').each(function() {
+    var $bar = $(this);
+    var progress = setInterval(function() {
+
+      var currWidth = parseInt($bar.attr('aria-valuenow'));
+      var maxWidth = parseInt($bar.attr('aria-valuemax'));
+
+      //update the progress
+        $bar.width(currWidth+'%');
+        $bar.attr('aria-valuenow',currWidth+10);
+
+      //clear timer when max is reach
+      if (currWidth >= maxWidth){
+        clearInterval(progress);
+      }
+
+    }, 500);
+});
       $.ajax({
       url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production/submit',
         method: 'POST',
@@ -40,6 +58,7 @@ weight: 5
       .done(function(data) {
         console.log("done");
         console.log(data);
+        $('#myModal').modal('show');
       })
       .fail(function(data) {
         console.log("fail");
