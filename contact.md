@@ -51,7 +51,7 @@ weight: 5
         }, 100);
       });
       $.ajax({
-      url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production/submit',
+      url: 'https://m9p097qv56.execute-api.us-east-1.amazonaws.com/production-cause-fail/submit',
         method: 'POST',
         data: $('#contact').serialize(),
         dataType: 'json'
