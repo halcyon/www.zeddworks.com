@@ -41,7 +41,7 @@ weight: 5
       $('#failed').hide();
       $('.progress-bar').attr('aria-valuenow',0)
       $('#submission').modal({keyboard: false,
-                              backdrop: 'static'});
+                              backdrop: false});
       $('#submission').modal('show');
       $('.progress-bar').each(function() {
         var $bar = $(this);
@@ -79,7 +79,8 @@ weight: 5
       .fail(function(data) {
         $('.progress-bar').attr('aria-valuenow',100);
         $('#failed').fadeIn();
-        $('#submission').modal({keyboard: true});
+        $('#submission').modal({keyboard: true,
+                                backdrop: true});
       });
       event.preventDefault();
     });
