@@ -35,6 +35,11 @@ weight: 5
 </div><!-- /.modal -->
 
 <script>
+  function failure() {
+    $('.progress-bar').attr('aria-valuenow',100);
+    $('#failed').fadeIn();
+  }
+
   $(document).ready(function() {
     $('#contact').parsley();
     $('#contact').submit(function(event) {
@@ -67,23 +72,19 @@ weight: 5
         dataType: 'json'
       })
       .done(function(data, textStatus, jqXHR) {
-        console.log(jqXHR);
         if (jqXHR.responseText='{"code":0,"error":"SUCCESS","message":"messages sent"}') {
-          console.log("woohoo");
+          $('.progress-bar').attr('aria-valuenow',100);
+          $('#delivered').fadeIn();
+          setInterval(function() {
+            $('#submission').modal('hide');
+            $('#contact').hide();
+          }, 3000);
         } else {
-          console.log("we have failed");
+          failure();
         }
-
-        $('.progress-bar').attr('aria-valuenow',100);
-        $('#delivered').fadeIn();
-        setInterval(function() {
-          $('#submission').modal('hide');
-          $('#contact').hide();
-        }, 3000);
       })
       .fail(function(data) {
-        $('.progress-bar').attr('aria-valuenow',100);
-        $('#failed').fadeIn();
+        failure();
       });
       event.preventDefault();
     });
