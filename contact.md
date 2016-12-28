@@ -57,18 +57,15 @@ weight: 5
         dataType: 'json'
       })
       .done(function(data) {
-        console.log("done");
-        console.log(data);
-        $('#delivered').fadeIn();
         $('.progress-bar').attr('aria-valuenow',100);
+        $('#delivered').fadeIn();
         setInterval(function() {
           $('#submission').modal('hide');
           $('#contact').hide();
         }, 3000);
       })
       .fail(function(data) {
-        console.log("fail");
-        console.log(data);
+        $('.progress-bar').attr('aria-valuenow',100);
         $('#failed').fadeIn();
       });
       event.preventDefault();
