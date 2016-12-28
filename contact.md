@@ -25,7 +25,7 @@ weight: 5
           Message Delivered.
         </div>
         <div id="failed" class="alert alert-danger" role="alert" style="display:none;">
-          Message delivery failed. Please leave a message with Doctor Lacy's office at 770-722-7827.
+          Delivery failed. Please leave a message with Dr Lacy's office at 770-722-7827.
         </div>
       </div>
     </div><!-- /.modal-content -->
