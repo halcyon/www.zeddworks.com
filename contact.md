@@ -40,7 +40,7 @@ weight: 5
       $('#delivered').hide();
       $('#failed').hide();
       $('.progress-bar').attr('aria-valuenow',0)
-      $('#submission').modal({keyboard: false
+      $('#submission').modal({keyboard: false,
                               backdrop: 'static'});
       $('#submission').modal('show');
       $('.progress-bar').each(function() {
