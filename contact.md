@@ -101,7 +101,7 @@ weight: 5
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" name="email" class="form-control" id="email" required="" data-parsley-error-message="This value should be a valid email." data-parsley-type="email">
+        <input type="text" name="email" class="form-control" id="email" data-parsley-type="email">
       </div>
 
       <div class="form-group">
